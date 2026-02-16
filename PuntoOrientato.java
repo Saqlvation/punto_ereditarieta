@@ -81,5 +81,20 @@ public class PuntoOrientato extends Punto {
         return super.toString() + " orientato a : " + orientamento + "\n" ;
  
     }
+
+    public boolean equals(Object altroOggetto) {
+        if(super.equals(altroOggetto)){
+        if (altroOggetto == null)
+            return false;
+        if (altroOggetto == this)
+            return true;
+        if (!(altroOggetto instanceof Punto))
+            return false;
+        PuntoOrientato altroPuntoOr = (PuntoOrientato)altroOggetto;
+        return orientamento.equalsIgnoreCase(altroPuntoOr.orientamento);
+    }
+    return false;
+}
+    
     
 }
