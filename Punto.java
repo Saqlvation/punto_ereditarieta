@@ -44,4 +44,16 @@ public class Punto {
     public String toString(){
         return " Coordinate : (" + x + ";" + y + ")";
     }
+        @Override
+    public boolean equals(Object altroOggetto) {
+        if (altroOggetto == null)
+            return false;
+        if (altroOggetto == this)
+            return true;
+        if (!(altroOggetto instanceof Punto))
+            return false;
+        Punto altroPunto = (Punto)altroOggetto;
+        return 
+                 x == altroPunto.x && y == altroPunto.y;
+    }
 }
